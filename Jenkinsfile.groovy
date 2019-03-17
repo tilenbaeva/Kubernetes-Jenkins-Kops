@@ -1,4 +1,5 @@
 node {
+    properties([pipelineTriggers([pollSCM('H * * * * ')])])
     stage ("Terraform init"){
         sh "terraform init"
     }
